@@ -32,14 +32,12 @@ $$
 - Our interest is _mutual behaviour_ of those random variables. 
 - Are they connected in some sense? Is some value of one variable more frequently accompanied with some other value of the second variable? Finally, can we take out more insights about occuring random experiments, when we take into account interaction of variables with each other?
 - To describe this interaction, or mutual behaviour, we use **joint PMF**, _i.e._ :
-
 \begin{center}
-\begin{tabular}{c | c c} 
+\begin{tabular}{c | c c}
         & \(Y=1\) & \(Y=2\) \\
         \hline
         \(X=1\) & $\frac{1}{8}$ & $\frac{1}{4}$ \\
         \(X=2\) & $\frac{1}{8}$ & $\frac{1}{2}$ \\
-    
 \end{tabular}
 \end{center}
 
@@ -57,8 +55,6 @@ $$
 \end{center}
 
 - We can also write $P(\{ X=x_i, Y=y_j \})$ as $P_{X, \, Y} \left(x_i, y_j\right)$
-
-
 
 ### Properties
 
@@ -122,6 +118,9 @@ P(A) = P(A|B), \quad P(B) = P(B|A) \\
 P(A) = P(A|B) = \frac{P(A \cap B)}{P(B)} \rightarrow P(A \cap B) = P(A)P(B).
 \end{gather*}
 
+## Independence
+
+- Consider every possible pair of the following events:
 
 \begin{columns}
 \column{.5\textwidth}
@@ -155,5 +154,63 @@ P(A) = P(A|B) = \frac{P(A \cap B)}{P(B)} \rightarrow P(A \cap B) = P(A)P(B).
 \draw[green!25, very thick, Stealth-Stealth]         ($({pic cs:x_n})+(1ex,1ex)$)
     to [left, ""]  ($({pic cs:y_m})+(-2ex,1ex)$);
 \end{tikzpicture}
+
+- If each pair turns to be independent events, then we say that random variables $X$ and $Y$ are independent.
+
+-
+\begin{multline*}
+    \forall x_i, \; \forall y_j: \; P\{ X=x_i \}P\{ Y = y_j \} = P(\{X=x_i \} \cap \{ Y=y_j\}) \\ = P(\{ X=x_i, Y=y_j \}).
+\end{multline*}
+
+## Problems
+
+The joint probability mass function of $X$ and $Y$ is given by:
+
+\begin{center}
+        \begin{tabular}{c | c c}
+    & \(Y=1\) & \(Y=2\) \\
+    \hline
+    \(X=1\) & $\frac{1}{8}$ & $\frac{1}{4}$ \\
+    \(X=2\) & $\frac{1}{8}$ & $\frac{1}{2}$ \\
+
+    \end{tabular}
+\end{center}
+
+\begin{enumerate}
+    \item Find marginal Probability Mass Functions for each random variable.
+    \item Compute the conditional mass function of $X$ given $Y = i$, $i = 1, 2$.
+    \item Are $X$ and $Y$ independent?
+    \item Compute $P\{XY \leq 3\}$, $P\{ X + Y > 2 \}$, $P \{ \frac{X}{Y} > 1 \}$.
+\end{enumerate}
+
+## Problems
+
+## Problems
+
+ We are given a joint PMF of the random vector \((X,Y)^{\top}\):
+
+\begin{center}
+        \begin{tabular}{c | c c c c}
+    & \(Y=0\) & \(Y=1\) & \(Y=2\) & \(Y=3\) \\
+    \hline
+    \(X=-1\) & \(0.02\) & \(0.03\) & \(0.09\) & \(0.01\) \\
+    \(X=0\) & \(0.04\) & \(0.2\) & \(0.16\) & \(0.1\) \\
+    \(X=1\) & \(0.05\) & \(0.1\) & \(0.15\) & \(0.05\) \\
+    \end{tabular}
+\end{center}
+
+Find:
+
+\begin{itemize}
+\item
+  marginal PMFs for each random variable,
+\item
+  check whether they are independent,
+\item
+  conditional PMF of \(X\) given that \(Y = 2\), and conditional PMF of
+  \(Y\) given that \(X = 1\),
+\item
+  probability \(P[Y > X]\).
+\end{itemize}
 
 ## Problems
